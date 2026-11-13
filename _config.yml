@@ -1,0 +1,19 @@
+# ---- Edit these -------------------------------------------------------
+title: Your Unit Name
+description: A portfolio of projects from Your Unit Name at the University of Chicago.
+
+# Site address. These are set for the mansueto-institute/ldj-portfolio repo.
+url: "https://mansueto-institute.github.io"
+baseurl: "/ldj-portfolio"
+
+# ---- Theme settings (no need to change) --------------------------------
+theme: minima
+
+collections:
+  projects:
+    output: false   # projects appear on the main page, not as separate pages
+
+plugins:
+  - jekyll-seo-tag
+
+exclude: [README.md, Gemfile, Gemfile.lock, vendor]
