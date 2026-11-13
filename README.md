@@ -28,8 +28,3 @@ One picture displays full width; two or more display side by side.
 Upload them to `assets/images/` (Add file → Upload files) and reference them as
 `/assets/images/filename.jpg`. Keep filenames lowercase with no spaces.
 Delete the example-*.jpg files once you've added your own.
-
-## Official UChicago fonts
-If you get web font files for UChicago Sans Serif / UChicago Serif, upload them
-to `assets/fonts/` and add @font-face rules at the top of `assets/main.scss`
-(below the two `---` lines). The font settings already list these names first.
