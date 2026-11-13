@@ -3,8 +3,7 @@ layout: default
 ---
 <header class="intro">
   <h1>{{ site.title }}</h1>
-  <p class="lede">Write a short introduction here: what this portfolio is, who made the work, and who it's for. Two or three sentences is plenty.</p>
-  <p>You can add a second paragraph if you need one, for example to explain how projects are chosen or how to get in touch.</p>
+  <p class="lede">The Local Data Journalism Initiative establishes partnerships between news organizations and university data science teams using the highest caliber data science and artificial intelligence tools and methodologies. This gallery highlights our published projects and provides links to see the work yourself.</p>
 </header>
 
 <ol class="project-list">
