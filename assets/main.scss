@@ -1,0 +1,75 @@
+---
+---
+// ===== UChicago palette =====
+$uc-maroon:          #800000;  // Phoenix Maroon
+$uc-light-greystone: #D9D9D9;
+$uc-dark-greystone:  #737373;
+$uc-footer-grey:     #333333;
+$uc-lake:            #007396;  // secondary accent, used for keyboard focus
+
+// ===== Fonts =====
+// Official fonts first (used if available), then free stand-ins from Google Fonts.
+$uc-sans:  "UChicago Sans", "Gotham", "Montserrat", "Helvetica Neue", Arial, sans-serif;
+$uc-serif: "UChicago Serif", "Adobe Garamond Pro", "EB Garamond", Garamond, Georgia, serif;
+
+// ===== Minima variables (set before the import) =====
+$base-font-family: $uc-sans;
+$base-font-size:   17px;
+$base-line-height: 1.6;
+$text-color:       #222222;
+$background-color: #FFFFFF;
+$brand-color:      $uc-maroon;
+$grey-color:       $uc-dark-greystone;
+$content-width:    900px;
+
+@import "minima";
+
+// ===== Base =====
+h1, h2 { font-family: $uc-serif; font-weight: 500; color: $uc-maroon; line-height: 1.15; }
+a, a:visited { color: $uc-maroon; text-decoration: underline; text-underline-offset: 0.15em; }
+a:hover { color: #5a0000; text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid $uc-lake; outline-offset: 2px; }
+.page-content { padding: 0 0 5rem; }
+
+// ===== Intro at the top =====
+.intro {
+  padding: 4.5rem 0 3rem;
+  border-bottom: 3px solid $uc-maroon;
+  h1 { font-size: 3.2rem; margin-bottom: 1.25rem; }
+  p { max-width: 42rem; color: #333; }
+}
+.lede { font-size: 1.25rem; line-height: 1.5; }
+
+// ===== Project entries =====
+.project-list { list-style: none; margin: 0; padding: 0; }
+.project {
+  padding: 3rem 0;
+  border-bottom: 1px solid $uc-light-greystone;
+  h2 { font-size: 2rem; margin-bottom: 0.4rem; }
+}
+.project-meta { color: #5c5c5c; font-size: 0.92rem; font-weight: 500; margin-bottom: 1.5rem; }
+
+.project-images {
+  display: grid; gap: 1rem; margin-bottom: 1.5rem;
+  figure { margin: 0; }
+  img { width: 100%; display: block; }
+}
+.project-images--many { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.project-images--many img { aspect-ratio: 4 / 3; object-fit: cover; }
+figcaption { font-size: 0.88rem; color: #5c5c5c; margin-top: 0.4rem; }
+
+.project:last-child { border-bottom: 0; }
+.project-text { max-width: 42rem; }
+.project-text p:last-child { margin-bottom: 0; }
+
+.link-list {
+  list-style: none; margin: 1.25rem 0 0; padding: 0;
+  display: flex; flex-wrap: wrap; gap: 0.5rem 1.75rem;
+  a { font-weight: 500; }
+}
+
+@media (max-width: 600px) {
+  .intro { padding-top: 2.5rem; }
+  .intro h1 { font-size: 2.3rem; }
+  .project h2 { font-size: 1.6rem; }
+}
