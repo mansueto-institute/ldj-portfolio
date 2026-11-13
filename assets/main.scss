@@ -1,0 +1,137 @@
+---
+---
+// ===== UChicago palette =====
+// Primary (should dominate):
+$uc-maroon:          #800000;  // Phoenix Maroon
+$uc-light-greystone: #D9D9D9;
+$uc-dark-greystone:  #737373;
+$uc-footer-grey:     #333333;
+// Secondary accents (use sparingly), each with light/dark variants in the guidelines:
+$uc-goldenrod: #EAAA00;
+$uc-lake:      #007396;
+$uc-forest:    #275D38;
+
+// ===== Fonts =====
+// The University's approved fonts are UChicago Sans Serif and UChicago Serif.
+// If your unit has the font files, add them (see README) and they'll be used first.
+// Montserrat and EB Garamond are free stand-ins that load from Google Fonts.
+$uc-sans:  "UChicago Sans", "Gotham", "Montserrat", "Helvetica Neue", Arial, sans-serif;
+$uc-serif: "UChicago Serif", "Adobe Garamond Pro", "EB Garamond", Garamond, Georgia, serif;
+
+// ===== Minima variables (set before the import) =====
+$base-font-family: $uc-sans;
+$base-font-size:   17px;
+$base-line-height: 1.6;
+$text-color:       #222222;
+$background-color: #FFFFFF;
+$brand-color:      $uc-maroon;
+$grey-color:       $uc-dark-greystone;
+$content-width:    1100px;
+
+@import "minima";
+
+// ===== Base =====
+h1, h2, h3, .page-heading { font-family: $uc-serif; font-weight: 500; color: $uc-maroon; line-height: 1.2; }
+h1, .page-heading { font-size: 2.6rem; margin-bottom: 0.5rem; }
+h2 { font-size: 1.9rem; margin-top: 2.5rem; }
+h3 { font-size: 1.35rem; }
+a { color: $uc-maroon; text-decoration: underline; text-underline-offset: 0.15em; }
+a:hover { color: #5a0000; text-decoration-thickness: 2px; }
+a:visited { color: $uc-maroon; }
+:focus-visible { outline: 3px solid $uc-lake; outline-offset: 2px; }
+.lede { font-size: 1.2rem; color: #444; max-width: 46rem; }
+
+.skip-link { position: absolute; left: -9999px; }
+.skip-link:focus { left: 1rem; top: 1rem; z-index: 10; background: #fff; color: $uc-maroon; padding: 0.5rem 1rem; }
+
+// ===== Brand bar (maroon strip at the very top) =====
+.brand-bar {
+  background: $uc-maroon;
+  min-height: 44px;
+  display: flex; align-items: center;
+  .wrapper { width: 100%; box-sizing: border-box; }
+  a, a:visited { color: #fff; text-decoration: none; font-weight: 500; font-size: 0.85rem; letter-spacing: 0.02em; }
+  a:hover { text-decoration: underline; }
+}
+
+// ===== Site header: centered unit name, nav underneath =====
+.site-header {
+  border-top: 0; border-bottom: 1px solid $uc-light-greystone;
+  text-align: center; min-height: 0;
+  .site-title, .site-title:visited {
+    float: none; display: inline-block;
+    padding: 2.25rem 0 1.75rem;
+    font-family: $uc-serif; font-weight: 500; font-size: 2rem; letter-spacing: 0;
+    line-height: 1.2; color: $uc-maroon; text-decoration: none;
+  }
+}
+.site-nav {
+  float: none; position: static; border: 0; border-top: 1px solid $uc-light-greystone;
+  background: #fff; text-align: center; line-height: 1;
+  .wrapper { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.25rem 2rem; padding-top: 0.9rem; padding-bottom: 0.9rem; }
+  .page-link, .page-link:visited {
+    color: $uc-footer-grey; text-decoration: none; font-weight: 500; font-size: 0.95rem;
+    padding: 0.3rem 0; border-bottom: 2px solid transparent; margin: 0 !important;
+  }
+  .page-link:hover, .page-link.active { color: $uc-maroon; border-bottom-color: $uc-maroon; }
+}
+
+// ===== Home intro =====
+.intro {
+  padding: 2rem 0 2.5rem; border-bottom: 1px solid $uc-light-greystone; margin-bottom: 1rem;
+  h1 { font-size: 3rem; max-width: 22ch; }
+}
+
+// ===== Buttons =====
+.button, .button:visited {
+  display: inline-block; background: $uc-maroon; color: #fff; text-decoration: none;
+  font-weight: 500; padding: 0.7rem 1.3rem; border: 2px solid $uc-maroon;
+}
+.button:hover { background: #fff; color: $uc-maroon; }
+.button-list { list-style: none; margin: 2rem 0 0; display: flex; flex-wrap: wrap; gap: 0.75rem; }
+
+// ===== Project grid =====
+.project-grid {
+  list-style: none; margin: 1.5rem 0 0; padding: 0;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.75rem;
+}
+.project-card {
+  border-top: 4px solid $uc-maroon; background: #F6F6F6;
+  display: flex; flex-direction: column;
+  img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+}
+.project-card-body {
+  padding: 1.25rem 1.25rem 1.5rem;
+  h3 { margin: 0 0 0.5rem; }
+  h3 a { text-decoration: none; }
+  h3 a:hover { text-decoration: underline; }
+  p { margin: 0 0 0.75rem; color: #333; }
+}
+.project-status { font-size: 0.85rem; color: #5c5c5c !important; font-weight: 500; }
+
+// ===== Project page =====
+.breadcrumb { font-size: 0.9rem; margin-bottom: 1rem; }
+.project-facts {
+  display: flex; flex-wrap: wrap; gap: 1rem 3rem; margin: 1.5rem 0 2rem;
+  padding: 1rem 0; border-top: 1px solid $uc-light-greystone; border-bottom: 1px solid $uc-light-greystone;
+  dt { font-size: 0.8rem; color: #5c5c5c; font-weight: 500; }
+  dd { margin: 0; font-weight: 500; }
+}
+.project-image { width: 100%; margin-bottom: 2rem; }
+.project > p, .project > ul, .project > ol { max-width: 46rem; }
+
+// ===== Footer =====
+.site-footer {
+  background: $uc-footer-grey; color: #fff; border-top: 0; margin-top: 4rem; padding: 2.5rem 0 2rem;
+  a, a:visited { color: #fff; }
+  p { margin-bottom: 0.5rem; font-size: 0.9rem; }
+}
+.footer-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1.5rem; }
+.footer-title { font-family: $uc-serif; font-size: 1.3rem !important; }
+.footer-copy { margin-top: 1.5rem; color: $uc-light-greystone; font-size: 0.8rem !important; }
+
+@media (max-width: 600px) {
+  .intro h1 { font-size: 2.2rem; }
+  h1, .page-heading { font-size: 2.1rem; }
+  .site-header .site-title { font-size: 1.6rem; }
+}

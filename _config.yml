@@ -1,0 +1,32 @@
+# ---- Edit these -------------------------------------------------------
+title: Your Unit Name
+unit_tagline: Projects and initiatives from Your Unit Name
+description: A portfolio of projects from Your Unit Name at the University of Chicago.
+email: yourunit@uchicago.edu
+address: 5801 South Ellis Avenue, Chicago, IL 60637
+
+# If the repo is named yourorg.github.io, leave baseurl empty.
+# If it's named anything else (e.g. "projects"), set baseurl: "/projects".
+url: "https://yourorg.github.io"
+baseurl: ""
+
+# Pages shown in the navigation, in order
+header_pages:
+  - projects.md
+  - about.md
+
+# ---- Theme settings (no need to change) --------------------------------
+theme: minima
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope: { path: "", type: projects }
+    values: { layout: project }
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
