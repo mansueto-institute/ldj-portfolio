@@ -1,21 +1,18 @@
 # ---- Edit these -------------------------------------------------------
-title: Your Unit Name
-unit_tagline: Projects and initiatives from Your Unit Name
+title: Local Data Journalism Initiative
+unit_tagline: Published projects and initiatives from three years of collaboration with local newsrooms.
 description: A portfolio of projects from Your Unit Name at the University of Chicago.
-email: yourunit@uchicago.edu
-address: 5801 South Ellis Avenue, Chicago, IL 60637
+email: ganon@uchicago.edu
 
-# If the repo is named yourorg.github.io, leave baseurl empty.
-# If it's named anything else (e.g. "projects"), set baseurl: "/projects".
-url: "https://yourorg.github.io"
-baseurl: ""
+url: "https://mansueto-institute.github.io"
+baseurl: "/ldj-portfolio"
 
 # Pages shown in the navigation, in order
 header_pages:
   - projects.md
   - about.md
 
-# ---- Theme settings (no need to change) --------------------------------
+# ---- Theme settings --------------------------------
 theme: minima
 
 collections:
