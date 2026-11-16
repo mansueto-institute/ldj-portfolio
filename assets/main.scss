@@ -50,12 +50,20 @@ a:hover { color: #5a0000; text-decoration-thickness: 2px; }
 .project-meta { color: #5c5c5c; font-size: 0.92rem; font-weight: 500; margin-bottom: 1.5rem; }
 
 .project-images {
-  display: grid; gap: 1rem; margin-bottom: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  
+  gap: 1rem; margin-bottom: 1.5rem;
   figure { margin: 0; }
-  img { width: 100%; display: block; }
+  img {
+    width: 100%; display: block;
+    aspect-ratio: 4 / 3;     
+    object-fit: cover;       
+    object-position: center;
+  }
 }
-.project-images--many { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-.project-images--many img { aspect-ratio: 4 / 3; object-fit: cover; }
+@media (max-width: 700px) { .project-images { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 450px) { .project-images { grid-template-columns: 1fr; } }
+
 figcaption { font-size: 0.88rem; color: #5c5c5c; margin-top: 0.4rem; }
 
 .project:last-child { border-bottom: 0; }

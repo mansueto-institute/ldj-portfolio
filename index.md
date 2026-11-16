@@ -20,7 +20,7 @@ layout: default
     {% endif %}
 
     {% if p.images %}
-      <div class="project-images{% if p.images.size > 1 %} project-images--many{% endif %}">
+      <div class="project-images">
         {% for img in p.images %}
           <figure>
             <img src="{{ img.src | relative_url }}" alt="{{ img.alt }}" loading="lazy">
